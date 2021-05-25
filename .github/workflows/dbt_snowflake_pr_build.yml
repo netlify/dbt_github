@@ -1,4 +1,4 @@
-name: dbt Snowflake (github_source) - PR Build
+name: dbt Snowflake (github) - PR Build
 
 on: pull_request
 

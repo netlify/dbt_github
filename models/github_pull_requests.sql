@@ -1,9 +1,10 @@
-with issue_joined as (
-    select *
-    from {{ ref('int_github_issue_joined') }}
+with
+
+issue_joined as (
+
+    select * from {{ ref('int_github_issue_joined') }}
+
 )
 
-select
-  *
-from issue_joined
+select * from issue_joined
 where is_pull_request
