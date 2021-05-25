@@ -8,6 +8,10 @@ clean-targets:
   - 'target'
   - 'dbt_modules'
 
+models:
+  github_source:
+    +schema: staging
+
 vars:
   github_source:
     github_database: raw
