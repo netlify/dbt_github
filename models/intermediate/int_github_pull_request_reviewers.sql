@@ -1,11 +1,11 @@
 with pull_request_review as (
     select *
-    from {{ ref('stg_github__pull_request_review') }}
-), 
+    from {{ ref('stg_github_pull_request_review') }}
+),
 
 github_user as (
     select *
-    from {{ ref('stg_github__user')}}
+    from {{ ref('stg_github_user')}}
 )
 
 select

@@ -1,6 +1,6 @@
 with issue_joined as (
     select *
-    from {{ ref('int_github__issue_joined') }}  
+    from {{ ref('int_github_issue_joined') }}
 )
 
 select

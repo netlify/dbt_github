@@ -1,15 +1,15 @@
 with issue as (
     select *
-    from {{ ref('stg_github__issue') }}
-), 
+    from {{ ref('stg_github_issue') }}
+),
 
 issue_closed_history as (
     select *
-    from {{ ref('stg_github__issue_closed_history') }}
-), 
+    from {{ ref('stg_github_issue_closed_history') }}
+),
 
 close_events_stacked as (
-    select   
+    select
       issue_id,
       created_at as updated_at,
       false as is_closed
@@ -20,7 +20,7 @@ close_events_stacked as (
       updated_at,
       is_closed
     from issue_closed_history
-), 
+),
 
 close_events_with_timestamps as (
   select

@@ -1,20 +1,20 @@
 with repository as (
     select *
-    from {{ ref('stg_github__repository')}}
+    from {{ ref('stg_github_repository')}}
 ),
 
 repo_teams as (
     select *
-    from {{ ref('stg_github__repo_team')}}
+    from {{ ref('stg_github_repo_team')}}
 ),
 
 teams as (
     select *
-    from {{ ref('stg_github__team')}}
+    from {{ ref('stg_github_team')}}
 ),
 
 team_repo as (
-    select 
+    select
         repository.repository_id,
         repository.full_name as repository,
         teams.name as team_name

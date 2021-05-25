@@ -1,51 +1,51 @@
 with issue as (
     select *
-    from {{ ref('stg_github__issue') }}
-), 
+    from {{ ref('stg_github_issue') }}
+),
 
 issue_labels as (
     select *
-    from {{ ref('int_github__issue_labels')}}
-), 
+    from {{ ref('int_github_issue_labels')}}
+),
 
 repository_teams as (
     select *
-    from {{ ref('int_github__repository_teams')}}
-), 
+    from {{ ref('int_github_repository_teams')}}
+),
 
 issue_assignees as (
     select *
-    from {{ ref('int_github__issue_assignees')}}
-), 
+    from {{ ref('int_github_issue_assignees')}}
+),
 
 issue_open_length as (
     select *
-    from {{ ref('int_github__issue_open_length')}}
-), 
+    from {{ ref('int_github_issue_open_length')}}
+),
 
 issue_comments as (
     select *
-    from {{ ref('int_github__issue_comments')}}
-), 
+    from {{ ref('int_github_issue_comments')}}
+),
 
 creator as (
     select *
-    from {{ ref('stg_github__user')}}
-), 
+    from {{ ref('stg_github_user')}}
+),
 
 pull_request_times as (
     select *
-    from {{ ref('int_github__pull_request_times')}}
-), 
+    from {{ ref('int_github_pull_request_times')}}
+),
 
 pull_request_reviewers as (
     select *
-    from {{ ref('int_github__pull_request_reviewers')}}
-), 
+    from {{ ref('int_github_pull_request_reviewers')}}
+),
 
 pull_request as (
     select *
-    from {{ ref('stg_github__pull_request')}}
+    from {{ ref('stg_github_pull_request')}}
 )
 
 select
@@ -76,9 +76,9 @@ left join issue_assignees
   on issue.issue_id = issue_assignees.issue_id
 left join issue_open_length
   on issue.issue_id = issue_open_length.issue_id
-left join issue_comments 
+left join issue_comments
   on issue.issue_id = issue_comments.issue_id
-left join creator 
+left join creator
   on issue.user_id = creator.user_id
 left join pull_request
   on issue.issue_id = pull_request.issue_id
