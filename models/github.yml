@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: github__issues
+  - name: github_issues
     description: >
       Basic information about issues as well as additional fields for things like assignees, projects, labels and open time
     columns:
@@ -80,7 +80,7 @@ models:
       - name: assignees
         description: The current list of users assigned to the issue
 
-  - name: github__pull_requests
+  - name: github_pull_requests
     description: >
       Basic information about pull_requests as well as additional fields about reviews and time between actions
     columns:
@@ -158,7 +158,7 @@ models:
 
       - name: assignees
         description: Users who have been assigned to the pull request
-        
+
       - name: hours_request_review_to_first_review
         description: Number of hours between the first request for review and a review
 
@@ -177,7 +177,7 @@ models:
       - name: number_of_reviews
         description: Number of times a pull request was reviewed
 
-  - name: github__daily_metrics
+  - name: github_daily_metrics
     description: >
       Summary numbers for issues and pull requests by day
     columns:
@@ -203,7 +203,7 @@ models:
 
       - name: number_prs_merged
         description: The total number of pull requests merged during this time period
-      
+
       - name: number_prs_closed_without_merge
         description: The total number of pull requests closed without a merge during this time period
 
@@ -214,7 +214,7 @@ models:
         description: The longest number of days a pull request opened during this time period was open
 
 
-  - name: github__weekly_metrics
+  - name: github_weekly_metrics
     description: >
       Summary numbers for issues and pull requests by week
     columns:
@@ -240,7 +240,7 @@ models:
 
       - name: number_prs_merged
         description: The total number of pull requests merged during this time period
-      
+
       - name: number_prs_closed_without_merge
         description: The total number of pull requests closed without a merge during this time period
 
@@ -249,8 +249,8 @@ models:
 
       - name: longest_days_pr_open
         description: The longest number of days a pull request opened during this time period was open
-        
-  - name: github__monthly_metrics
+
+  - name: github_monthly_metrics
     description: >
       Summary numbers for issues and pull requests by month
     columns:
@@ -276,7 +276,7 @@ models:
 
       - name: number_prs_merged
         description: The total number of pull requests merged during this time period
-      
+
       - name: number_prs_closed_without_merge
         description: The total number of pull requests closed without a merge during this time period
 
@@ -285,8 +285,8 @@ models:
 
       - name: longest_days_pr_open
         description: The longest number of days a pull request opened during this time period was open
-        
-  - name: github__quarterly_metrics
+
+  - name: github_quarterly_metrics
     description: >
       Summary numbers for issues and pull requests by quarter
     columns:
@@ -312,7 +312,7 @@ models:
 
       - name: number_prs_merged
         description: The total number of pull requests merged during this time period
-      
+
       - name: number_prs_closed_without_merge
         description: The total number of pull requests closed without a merge during this time period
 
@@ -321,4 +321,3 @@ models:
 
       - name: longest_days_pr_open
         description: The longest number of days a pull request opened during this time period was open
-                
