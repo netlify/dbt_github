@@ -1,3 +1,4 @@
 packages:
-  - git: https://github.com/netlify/dbt_github_source.git
-    warn-unpinned: false
+#  - git: https://github.com/netlify/dbt_github_source.git
+#    warn-unpinned: false
+  - local: ~/Developer/netlify/dbt_github_source
