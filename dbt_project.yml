@@ -3,14 +3,14 @@ config-version: 2
 name: 'github'
 version: '0.2.0'
 
-require-dbt-version: [">=0.18.0", "<0.20.0"] 
+require-dbt-version: [">=0.18.0", "<0.20.0"]
 
 models:
     github:
-        materialized: table
+        materialized: view
         intermediate:
             materialized: ephemeral
- 
+
 vars:
     github:
         issue_assignee:                 "{{ ref('stg_github__issue_assignee') }}"
