@@ -1,6 +1,7 @@
+{{ config(alias='mart_github_issues') }}
 with issue_joined as (
     select *
-    from {{ ref('int_github__issue_joined') }}  
+    from {{ ref('int_github__issue_joined') }}
 )
 
 select
